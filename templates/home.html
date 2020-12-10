@@ -1,0 +1,69 @@
+{#{% extends 'bootstrap/base.html' %}#}
+{% extends 'base.html' %}
+
+{% block head %}
+<title>NCAA_PRO</title>
+{#<link type="text/css" href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">#}
+{% endblock %}
+
+{% block body %}
+{#<style>body{background-image: url(../static/images/gator.jpg); background-size:cover;}</style>#}
+<div class="limiter">
+<h1 style="text-align: center">NCAA FOOTBALL PRO</h1>
+<div class="container-login100">
+    <div class="wrap-login100">
+        <span class="login100-form-title p-b-26">
+            Welcome {{user}}!
+        </span>
+        <img src="{{ url_for('static', filename='images/ncaa.jpg') }}" alt="Avatar" class="center logo">
+        <div class="container-login100-form-btn">
+            <div class="wrap-login100-form-btn">
+{#                <div class="login100-form-title p-b-26">#}
+{#                    <button type="button" class="btn btn-outline-primary">#}
+{#                        <a class href="/graph">#}
+{#                          Sample Query#}
+{#                        </a>#}
+{#                    </button>#}
+{#                </div>#}
+                <div class="login100-form-title p-b-26">
+                    <button type="button" class="btn btn-outline-primary">
+                        <a class href="/interesting_trends_list">
+                          Insights
+                        </a>
+                    </button>
+                </div>
+                <div class="login100-form-title p-b-26">
+                    <button type="button" class="btn btn-outline-primary">
+                        <a class href="/head_to_head">
+                            Head to Head
+                        </a>
+                    </button>
+                </div>
+
+                <div class="login100-form-title p-b-26">
+                    <button type="button" class="btn btn-outline-primary">
+                        <a class href="/simple">
+                            Quick QA
+                        </a>
+                    </button>
+                </div>
+
+{#                <div class="login100-form-title p-b-26">#}
+{#                    <button type="button" class="btn btn-outline-primary">#}
+{#                        <a class href="/goodtoknow">#}
+{#                         Good to Know#}
+{#                        </a>#}
+{#                    </button>#}
+{#                </div>#}
+                <p>Number of tuples: {{tuples}}</p>
+                <div class="login100-form-title p-b-26">
+                    <a class="txt2" href="/">
+                        Logout
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
